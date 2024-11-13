@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a backend implementation of a chat application using PHP, the Slim framework, and SQLite. Users can create chat groups, join these groups, and send messages within them. The groups are public, so any user can join any group. All communication between the client and server is done over a simple RESTful JSON API over HTTP.
+This is a backend implementation of a chat application using PHP, the Slim framework, and SQLite. Users can create chat groups, join these groups, and send messages within them. The groups are public, so any user can join any group.
 
 ## Features
 
