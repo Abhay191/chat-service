@@ -1,4 +1,7 @@
+---
+
 # Chat Service
+
 ## Overview
 
 This is a backend implementation of a chat application using PHP, the Slim framework, and SQLite. Users can create chat groups, join these groups, and send messages within them. The groups are public, so any user can join any group. Users can also view all the messages.
@@ -10,7 +13,6 @@ This is a backend implementation of a chat application using PHP, the Slim frame
 - Send messages within chat groups
 - List all messages within a group
 - List all chat groups
-- List all messages within the group
 
 ## Technologies Used
 
@@ -58,41 +60,49 @@ This is a backend implementation of a chat application using PHP, the Slim frame
 
 #### User Endpoints
 
-- **Create User**
+- **Create User**  
   ```http
   POST /api/users
+  Content-Type: application/json
   {
     "username": "username"
   }
+  ```
 
-- **Create Group**
+- **Create Group**  
   ```http
   POST /api/groups
+  Content-Type: application/json
   {
     "name": "GroupName",
-    "user_id": Admin's UserId
+    "user_id": "Admin's UserId"
   }
+  ```
 
-
-- **Join Group**
+- **Join Group**  
   ```http
   POST /api/groups/join
+  Content-Type: application/json
   {
     "id": "GroupId",
     "user_id": "UserId"
   }
+  ```
 
-- **List All Group**
+- **List All Groups**  
   ```http
   GET /api/groups/list
+  ```
 
-
-- **List All Messages within the Group**
+- **List All Messages within the Group**  
   ```http
   GET /api/messages/list
+  Content-Type: application/json
   {
-    "group_id": "GroupId",
+    "group_id": "GroupId"
   }
+  ```
 
+**Note:** All IDs are integers.
 
-
+---
