@@ -70,7 +70,7 @@ This is a backend implementation of a chat application using PHP, the Slim frame
   POST /api/groups
   {
     "name": "GroupName",
-    "user_id": "Admin's UserId"
+    "user_id": Admin's UserId
   }
 
 
