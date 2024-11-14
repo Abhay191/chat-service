@@ -69,8 +69,8 @@ This is a backend implementation of a chat application using PHP, the Slim frame
   ```http
   POST /api/groups
   {
-    "name": GroupName,
-    "user_id": Admin's UserId
+    "name": "GroupName",
+    "user_id": "Admin's UserId"
   }
 
 
@@ -78,8 +78,8 @@ This is a backend implementation of a chat application using PHP, the Slim frame
   ```http
   POST /api/groups/join
   {
-    "id": GroupId,
-    "user_id": UserId
+    "id": "GroupId",
+    "user_id": "UserId"
   }
 
 - **List All Group**
@@ -90,9 +90,9 @@ This is a backend implementation of a chat application using PHP, the Slim frame
 - **List All Messages within the Group**
   ```http
   GET /api/messages/list
-{
-    "group_id": GroupId,
-}
+  {
+    "group_id": "GroupId",
+  }
 
 
 
