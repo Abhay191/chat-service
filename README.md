@@ -42,7 +42,7 @@ This is a backend implementation of a chat application using PHP, the Slim frame
 
 3. Set up the database:
     ```bash
-    php php src/database/init_db.php
+    php src/database/init_db.php
     ```
 
 ### Running the Application
