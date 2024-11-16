@@ -164,6 +164,23 @@ Manages the many-to-many relationship between users and groups. This table assoc
   A **one-to-many** relationship exists between groups and messages. A group can contain many messages, but each message belongs to only one group.
 
 
+## Running Tests
+### Testing with `systemTest.php`
+
+1. Ensure the server is running on `localhost:8080`:
+    ```bash
+    php -S localhost:8080 -t public
+    ```
+
+2. The `systemTest.php` file contains the system test cases for this project. To run this specific test file, use the following command:
+    ```bash
+    ./vendor/bin/phpunit tests/systemTest.php
+        ```
+
+
+
+
+
 
 ---
 
