@@ -1,18 +1,18 @@
 ---
 
-# Chat Service
+# Chat Service <img src="https://github.com/user-attachments/assets/6941c363-8ac8-4169-a0c9-295451ef1809" alt="Chat Logo" width="45" height="auto"/>
 
-## Overview![speech-35342_1280](https://github.com/user-attachments/assets/6941c363-8ac8-4169-a0c9-295451ef1809)
+## Overview
 
 
 This is a backend implementation of a chat application using PHP, the Slim framework, and SQLite. The application allows users to create public chat groups, join existing groups, and send messages within these groups. All groups are public, enabling any user to join any group. Additionally, users can view all messages within the groups.
 
 ## Features
 
-- Create Users
+- Create users
 - Create chat groups
 - Join chat groups
-- Send messages within chat groups
+- Send messages in chat groups
 - List all messages within a group
 - List all chat groups
 
@@ -30,7 +30,7 @@ This is a backend implementation of a chat application using PHP, the Slim frame
 
 - PHP 7.4 or higher
 - Composer
-- SQLite
+- PHP SQLite extension (for SQLite database support)
 
 ### Installation
 
@@ -161,6 +161,7 @@ Manages the many-to-many relationship between users and groups. This table assoc
 | `group_id`| INTEGER | Foreign key referencing the `id` of the `groups` table. |
 | **Primary Key** | Composite of `user_id` and `group_id`. Ensures a user can only belong to a group once. |
 
+
 ### Relationships
 
 - **Users and Groups**:  
@@ -173,7 +174,7 @@ Manages the many-to-many relationship between users and groups. This table assoc
   A **one-to-many** relationship exists between groups and messages. A group can contain many messages, but each message belongs to only one group.
 
 
-## Running Tests
+## Testing
 ### Testing with `systemTest.php`
 
 1. Ensure the server is running on `localhost:8080`:
@@ -187,9 +188,8 @@ Manages the many-to-many relationship between users and groups. This table assoc
         ```
 
 
-
-
-
+## License
+This project is licensed under the MIT License. See the LICENSE file for more details.
 
 ---
 
