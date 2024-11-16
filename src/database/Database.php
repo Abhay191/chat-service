@@ -8,6 +8,7 @@ class Database {
         $this->pdo = new PDO('sqlite:' . __DIR__ . '/database.sqlite');
         $this->createTables();
     }
+    
 
     private function createTables() {
         $this->pdo->exec("CREATE TABLE IF NOT EXISTS users (
