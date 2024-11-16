@@ -108,29 +108,3 @@ This is a backend implementation of a chat application using PHP, the Slim frame
 
 ---
 
-
-
-
-
-
-
-+----------------+    +----------------+    +----------------+
-|     Users      |    |     Groups     |    |    Messages    |
-+----------------+    +----------------+    +----------------+
-| id (PK)        |    | id (PK)        |    | id (PK)        |
-| username (U)   |    | name (U)       |    | group_id (FK)  |
-+----------------+    | created_at     |    | user_id (FK)   |
-                      +----------------+    | content        |
-                                            | timestamp      |
-                                            +----------------+
-                                                     ^
-                                                     |
-                            +------------------------+------------------------+
-                            |                                                 |
-                      +----------------+                                  +----------------+
-                      |   User_Group   |                                  |   User_Group   |
-                      +----------------+                                  +----------------+
-                      | user_id (FK)   |                                  | group_id (FK)  |
-                      | group_id (FK)  |                                  +----------------+
-                      +----------------+
-
