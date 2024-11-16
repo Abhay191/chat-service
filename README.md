@@ -1,9 +1,9 @@
 ---
 
 # Chat Service
-![Chat Logo](https://drive.google.com/file/d/1lXuUaapDzrGcc8nOfbLWkSfo-IDY5NJz/view?usp=sharing)
 
-## Overview
+## Overview![speech-35342_1280](https://github.com/user-attachments/assets/6941c363-8ac8-4169-a0c9-295451ef1809)
+
 
 This is a backend implementation of a chat application using PHP, the Slim framework, and SQLite. The application allows users to create public chat groups, join existing groups, and send messages within these groups. All groups are public, enabling any user to join any group. Additionally, users can view all messages within the groups.
 
