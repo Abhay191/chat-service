@@ -1,16 +1,16 @@
-
 <?php
 
-class Database {
+class Database
+{
     private $pdo;
-
-    public function __construct() {
+    public function __construct()
+    {
         $this->pdo = new PDO('sqlite:' . __DIR__ . '/database.sqlite');
         $this->createTables();
     }
-    
 
-    private function createTables() {
+    private function createTables()
+    {
         $this->pdo->exec("CREATE TABLE IF NOT EXISTS users (
             id INTEGER PRIMARY KEY,
             username TEXT UNIQUE NOT NULL
@@ -38,7 +38,8 @@ class Database {
         )");
     }
 
-    public function getConnection() {
+    public function getConnection()
+    {
         return $this->pdo;
     }
 }

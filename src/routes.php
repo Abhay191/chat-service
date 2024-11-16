@@ -1,4 +1,5 @@
 <?php
+
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Slim\Routing\RouteCollectorProxy;
@@ -16,10 +17,10 @@ $messageController = new MessageController($db->getConnection());
 
 
 $app->group('/api', function (RouteCollectorProxy $group) use ($userController, $groupController, $messageController) {
-    $group->post('/users', [$userController, 'createUser']);    
-    $group->post('/groups', [$groupController, 'createGroup']);         
-    $group->post('/groups/join', [$groupController, 'joinGroup']);      
-    $group->post('/messages', [$messageController, 'sendMessage']);         
-    $group->get('/groups/list', [$groupController, 'getAllGroups']);        
-    $group->get('/messages/list', [$messageController, 'listMessages']);       
+    $group->post('/users', [$userController, 'createUser']);
+    $group->post('/groups', [$groupController, 'createGroup']);
+    $group->post('/groups/join', [$groupController, 'joinGroup']);
+    $group->post('/messages', [$messageController, 'sendMessage']);
+    $group->get('/groups/list', [$groupController, 'getAllGroups']);
+    $group->get('/messages/list', [$messageController, 'listMessages']);
 });
