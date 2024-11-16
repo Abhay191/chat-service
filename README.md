@@ -8,6 +8,7 @@ This is a backend implementation of a chat application using PHP, the Slim frame
 
 ## Features
 
+- Create Users
 - Create chat groups
 - Join chat groups
 - Send messages within chat groups
@@ -61,51 +62,58 @@ This is a backend implementation of a chat application using PHP, the Slim frame
 
 #### User Endpoints
 
-- **Create User**  
-  ```http
-  POST /api/users
-  Content-Type: application/json
-  {
-    "username": "username"
-  }
-  ```
+- **Create User**
+  - **POST** `http://localhost:8080/api/users`
+  - Request Body:
+    ```json
+    {
+        "username": "string"
+    }
+    ```
 
-- **Create Group**  
-  ```http
-  POST /api/groups
-  Content-Type: application/json
-  {
-    "name": "GroupName",
-    "user_id": "Admin's UserId"
-  }
-  ```
+#### Group Endpoints
+- **Create Group**
+  - **POST** `http://localhost:8080/api/groups`
+  - Request Body:
+    ```json
+    {
+        "name": "string",
+        "user_id": "integer"
+    }
+    ```
 
-- **Join Group**  
-  ```http
-  POST /api/groups/join
-  Content-Type: application/json
-  {
-    "id": "GroupId",
-    "user_id": "UserId"
-  }
-  ```
+- **Join Group**
+  - **POST** `http://localhost:8080/api/groups/join`
+  - Request Body:
+    ```json
+    {
+        "group_id": "integer",
+        "user_id": "integer"
+    }
+    ```
 
-- **List All Groups**  
-  ```http
-  GET /api/groups/list
-  ```
+- **List All Groups**
+  - **GET** `http://localhost:8080/api/groups/list`
 
-- **List All Messages within the Group**  
-  ```http
-  GET /api/messages/list
-  Content-Type: application/json
-  {
-    "group_id": "GroupId"
-  }
-  ```
-
-**Note:** All IDs are integers.
-
+#### Message Endpoints
+- **Send Message**
+  - **POST** `http://localhost:8080/api/messages`
+  - Request Body:
+    ```json
+    {
+        "group_id": "integer",
+        "user_id": "integer",
+        "content": "string"
+    }
+    ```
+- **List All Messages within the Group**
+  - **GET** `http://localhost:8080/api/messages/list`
+  - Request Body:
+    ```json
+    {
+        "group_id": "integer"
+    }
+    ```
 
 
 
