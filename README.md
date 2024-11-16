@@ -1,6 +1,7 @@
 ---
 
-# Chat Service ![Chat Logo](https://drive.google.com/file/d/1lXuUaapDzrGcc8nOfbLWkSfo-IDY5NJz/view?usp=sharing)
+# Chat Service
+![Chat Logo](https://drive.google.com/file/d/1lXuUaapDzrGcc8nOfbLWkSfo-IDY5NJz/view?usp=sharing)
 
 ## Overview
 
