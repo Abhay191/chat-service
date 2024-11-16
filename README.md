@@ -28,6 +28,7 @@ This is a backend implementation of a chat application using PHP, the Slim frame
 
 - PHP 7.4 or higher
 - Composer
+- SQLite
 
 ### Installation
 
