@@ -188,8 +188,5 @@ Manages the many-to-many relationship between users and groups. This table assoc
     ```
 
 
-## License
-This project is licensed under the MIT License. See the LICENSE file for more details.
-
 ---
 
